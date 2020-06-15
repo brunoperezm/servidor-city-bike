@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Lista de alumnos</title>
+    </head>
+    <body>
+        <h1>Lista de alumnos</h1>
+        <hr />
+        <table>
+            <tr>
+                <td><b>ID alumno</b></td>
+                <td><b>Nombre</b></td>
+            </tr>
+            {% for id in alumnos.keys() %}
+                <tr>
+                    <td>{{ id }}</td>
+                    <td>{{ alumnos[id] }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
