@@ -1,19 +1,25 @@
 <html>
     <head>
-        <title>Lista de alumnos</title>
+        <title>Lista de Estaciones</title>
     </head>
     <body>
-        <h1>Lista de alumnos</h1>
+        <h1>Lista de estaciones</h1>
         <hr />
         <table>
             <tr>
-                <td><b>ID alumno</b></td>
+                <td><b>ID estacion</b></td>
                 <td><b>Nombre</b></td>
+                <td><b>Descripción</b></td>
+                <td><b>Lat</b></td>
+                <td><b>Long</b></td>
             </tr>
-            {% for id in alumnos.keys() %}
+            {% for id in estaciones.keys() %}
                 <tr>
                     <td>{{ id }}</td>
-                    <td>{{ alumnos[id] }}</td>
+                    <td>{{ estaciones[id][0] }}</td>
+                    <td>{{ estaciones[id][1] }}</td>
+                    <td>{{ estaciones[id][2] }}</td>
+                    <td>{{ estaciones[id][3] }}</td>
                 </tr>
             {% endfor %}
         </table>
