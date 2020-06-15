@@ -4,7 +4,7 @@ services:
      
   host2: 
     build:
-      dockerfile: images/webserver.dockerfile
+      dockerfile: Dockerfile
       context: .
     ports: 
       - 8080:80
