@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Lista de Slots</title>
+    </head>
+    <body>
+        <h1>Lista de slots</h1>
+        <hr />
+        <table>
+            <tr>
+                <td><b>Estacion</b></td>
+                <td><b>Usuario que lo usa</b></td>
+                <td><b>Posicion slot</b></td>
+            </tr>
+            {% for slot in slotsList %}
+                <tr>
+                    <td>{{ slot[0] }}</td>
+                    <td>{{ slot[1] }}</td>
+                    <td>{{ slot[2] }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
