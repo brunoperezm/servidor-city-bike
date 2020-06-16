@@ -8,13 +8,19 @@
         <table>
             <tr>
                 <td><b>Estacion</b></td>
-                <td><b>Usuario que lo usa</b></td>
+                <td><b>Ultima persona que lo usó</b></td>
+                <td><b>Estado</b></td>
                 <td><b>Posicion slot</b></td>
             </tr>
             {% for slot in slotsList %}
                 <tr>
                     <td>{{ slot[0] }}</td>
                     <td>{{ slot[1] }}</td>
+                    {% if slot[1]=="Ninguno" %}
+                        <td>Tiene Bici Disponible</td>
+                    {% else %}
+                        <td>Slot Vacío (se prestó una bici)</td>
+                    {% endif %}
                     <td>{{ slot[2] }}</td>
                 </tr>
             {% endfor %}
