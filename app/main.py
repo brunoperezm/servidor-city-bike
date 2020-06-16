@@ -1,4 +1,5 @@
 import sys
+import os
 
 from flask import Flask,abort,render_template,Response,request,jsonify
 
@@ -103,4 +104,9 @@ def getSlotsByEstacion(estacionId):
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", debug=True, port=80)
+    port = int(os.environ.get('PORT', 5000))
+    if (os.environ.get("DEBUG") == "yes"):
+        debug = True
+    else:
+        debug = False
+    app.run(host='0.0.0.0', port=port, debug=debug)
